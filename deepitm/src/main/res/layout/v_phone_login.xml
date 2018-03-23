@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/region"
+            android:layout_width="match_parent"
+            android:background="@drawable/sp_txt_region"
+            android:layout_height="@dimen/edit_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/txt_padding"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:drawableRight="@drawable/icon_left_arrow"
+            android:textSize="18sp"/>
+
+    <LinearLayout
+            android:paddingTop="@dimen/txt_padding"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/region_number"
+                android:layout_width="@dimen/region_number_width"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:background="@drawable/sp_txt_region"
+                android:layout_height="@dimen/edit_height"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/txt_padding"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+        <EditText
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:inputType="phone"
+                android:hint="@string/phone_number"
+                android:background="@drawable/sp_txt_region"
+                android:paddingLeft="@dimen/txt_padding"
+                android:layout_height="@dimen/edit_height"/>
+    </LinearLayout>
+</LinearLayout>

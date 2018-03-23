@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:fitsSystemWindows="true"
+              android:background="@color/transparent"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              tools:context="com.huawei.deepitm.ui.LoginAct">
+
+    <!-- Login progress -->
+    <ProgressBar
+            android:id="@+id/login_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"/>
+
+    <Space
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dip"/>
+
+    <ImageView
+            android:background="@drawable/ic_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:padding="@dimen/input_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <include
+                    layout="@layout/v_email_login"
+                    android:visibility="visible"
+                    android:id="@+id/email_login_form"/>
+
+            <include
+                    layout="@layout/v_phone_login"
+                    android:visibility="gone"
+                    android:id="@+id/phone_login_form"/>
+
+
+            <Button
+                    android:id="@+id/email_sign_in_button"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/white"
+                    android:text="@string/action_sign_in_short"
+                    android:background="@drawable/slct_btn"
+                    android:textStyle="bold"
+                    android:onClick="signIn"/>
+
+            <TextView
+                    android:onClick="selectLoginType"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/via_phone"
+                    android:padding="@dimen/txt_padding"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <Space
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+</LinearLayout>

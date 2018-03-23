@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/gradient_home"
+        android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/vp_home"
+            app:layout_constraintBottom_toTopOf="@+id/tab_home"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+    <android.support.design.widget.TabLayout
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/tab_home"
+            app:tabGravity="fill"
+            app:tabTextColor="@color/txt_unslct"
+            app:tabSelectedTextColor="@color/txt_slcted"
+            app:tabIndicatorHeight="0dp"
+            app:tabTextAppearance="@style/tab_style"
+            android:layout_width="0dp"
+            android:background="@color/bg_tab_home"
+            android:layout_height="wrap_content"/>
+
+
+</android.support.constraint.ConstraintLayout>
