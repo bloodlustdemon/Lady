@@ -14,7 +14,7 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             android:maxLines="1"
-            android:drawableRight="@drawable/icon_left_arrow"
+            android:drawableRight="@drawable/ic_left_arrow"
             android:textSize="18sp"/>
 
     <LinearLayout
