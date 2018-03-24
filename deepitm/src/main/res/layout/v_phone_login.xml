@@ -7,14 +7,14 @@
     <TextView
             android:id="@+id/region"
             android:layout_width="match_parent"
-            android:background="@drawable/sp_txt_region"
+            android:background="@drawable/ll_txt_region"
             android:layout_height="@dimen/edit_height"
             android:gravity="center_vertical"
             android:paddingLeft="@dimen/txt_padding"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:maxLines="1"
-            android:drawableRight="@drawable/ic_left_arrow"
+            android:drawableRight="@drawable/ic_right_arrow"
             android:textSize="18sp"/>
 
     <LinearLayout
@@ -28,7 +28,7 @@
                 android:layout_width="@dimen/region_number_width"
                 android:maxLines="1"
                 android:textColor="@color/black"
-                android:background="@drawable/sp_txt_region"
+                android:background="@drawable/ll_txt_region"
                 android:layout_height="@dimen/edit_height"
                 android:gravity="center_vertical"
                 android:paddingLeft="@dimen/txt_padding"
@@ -41,7 +41,7 @@
                 android:maxLines="1"
                 android:inputType="phone"
                 android:hint="@string/phone_number"
-                android:background="@drawable/sp_txt_region"
+                android:background="@drawable/ll_txt_region"
                 android:paddingLeft="@dimen/txt_padding"
                 android:layout_height="@dimen/edit_height"/>
     </LinearLayout>

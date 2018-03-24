@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * AUTHOR Paul
  * DATE 2018/3/24
  */
-public class HomeAct extends BaseAct implements TabLayout.OnTabSelectedListener {
+public class HomeAct extends BaseAct /*implements TabLayout.OnTabSelectedListener*/ {
     @Override
     protected int getLayoutId() {
         return R.layout.act_home;
@@ -29,7 +29,7 @@ public class HomeAct extends BaseAct implements TabLayout.OnTabSelectedListener 
         tabLayout.setupWithViewPager(viewPager);
         initTab(tabLayout);
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
-        tabLayout.addOnTabSelectedListener(this);
+//        tabLayout.addOnTabSelectedListener(this);
     }
 
     private void initVp(ViewPager viewPager) {
@@ -53,18 +53,18 @@ public class HomeAct extends BaseAct implements TabLayout.OnTabSelectedListener 
         tabLayout.getTabAt(3).setIcon(R.drawable.slct_account).setText(R.string.account);
     }
 
-    @Override
-    public void onTabSelected(TabLayout.Tab tab) {
-
-    }
-
-    @Override
-    public void onTabUnselected(TabLayout.Tab tab) {
-
-    }
-
-    @Override
-    public void onTabReselected(TabLayout.Tab tab) {
-
-    }
+//    @Override
+//    public void onTabSelected(TabLayout.Tab tab) {
+//
+//    }
+//
+//    @Override
+//    public void onTabUnselected(TabLayout.Tab tab) {
+//
+//    }
+//
+//    @Override
+//    public void onTabReselected(TabLayout.Tab tab) {
+//
+//    }
 }

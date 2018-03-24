@@ -3,5 +3,9 @@
     <declare-styleable name="img">
         <attr name="num_color" format="reference"></attr>
         <attr name="num_bg" format="reference"></attr>
+        <attr name="inner_color" format="color"></attr>
+        <attr name="out_color" format="color"></attr>
+        <attr name="border" format="dimension"></attr>
+
     </declare-styleable>
 </resources>

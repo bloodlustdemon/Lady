@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">@color/bg_act</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
@@ -15,8 +15,11 @@
     <color name="blue_btn">#1e90ff</color>
     <color name="gray_btn">@color/darker_gray</color>
 
+
+    <color name="bg_act">#F1F3F6</color>
     <color name="bg_home">#0E365D</color>
     <color name="bg_tab_home">#212121</color>
     <color name="txt_unslct">#515151</color>
     <color name="txt_slcted">#788599</color>
+    <color name="orange">#FF9701</color>
 </resources>

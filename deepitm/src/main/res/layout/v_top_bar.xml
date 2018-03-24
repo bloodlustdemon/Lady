@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="?attr/actionBarSize">
+
+    <org.paul.lib.widget.ImageWithNumberView
+            android:id="@+id/img_left"
+            app:num_bg="@color/orange"
+            android:layout_width="50dip"
+            android:padding="12dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"/>
+
+    <ImageView
+            android:padding="12dp"
+            android:id="@+id/img_left2"
+            android:layout_width="50dip"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"/>
+
+    <TextView
+            android:id="@+id/tv_top"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"/>
+    <Button
+            android:id="@+id/img_right2"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:layout_width="50dip"
+            android:layout_height="match_parent"/>
+    <ImageView
+            android:id="@+id/img_right"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:layout_width="50dip"
+            android:layout_height="match_parent"/>
+
+
+</LinearLayout>

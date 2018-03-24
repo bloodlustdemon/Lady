@@ -12,5 +12,58 @@
         <item name="textAllCaps">false</item>
         <item name="android:textSize">@dimen/tab_txt_size</item>
     </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+
+    <declare-styleable name="roundimage">
+        <attr name="border_thickness" format="dimension"></attr>
+        <attr name="image_width" format="dimension"></attr>
+        <attr name="image_height" format="dimension"></attr>
+        <attr name="border_outside_color" format="color"></attr>
+        <attr name="border_inside_color" format="color"></attr>
+    </declare-styleable>
+    <!--verify code-->
+    <!-- 自定义验证码输入框-->
+    <declare-styleable name="vericationCodeView">
+        <!--输入框的数量-->
+        <attr name="vcv_et_number" format="integer" />
+        <!--输入类型-->
+        <attr name="vcv_et_inputType">
+            <enum name="number" value="0" />
+            <enum name="numberPassword" value="1" />
+            <enum name="text" value="2" />
+            <enum name="textPassword" value="3" />
+        </attr>
+        <!--输入框的宽度-->
+        <attr name="vcv_et_width" format="dimension|reference" />
+        <!--输入框文字颜色-->
+        <attr name="vcv_et_text_color" format="color|reference" />
+        <!--输入框文字大小-->
+        <attr name="vcv_et_text_size" format="dimension|reference" />
+        <!--输入框背景-->
+        <attr name="vcv_et_bg" format="reference" />
+        <!--光标样式-->
+        <attr name="vcv_et_cursor" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="CharIndexView">
+        <!-- 	banner背影色  	 -->
+        <!-- 索引字大小 -->
+        <attr name="indexTextSize" format="dimension"/>
+        <!-- 字颜色 -->
+        <attr name="charTextColor" format="color"/>
+        <!-- 索引字颜色 -->
+        <attr name="indexTextColor" format="color"/>
+    </declare-styleable>
+    <!--top bar-->
+    <declare-styleable name="topbar">
+        <attr name="lt_img" format="reference"/>
+        <attr name="rt_img" format="reference"/>
+        <attr name="lt_img2" format="reference"/>
+        <attr name="rt_img2" format="reference|color"/>
+    </declare-styleable>
+    <declare-styleable name="tab">
+    </declare-styleable>
 
 </resources>

@@ -72,6 +72,10 @@ public class LoginAct extends BaseAct {
         if(prepared) {
             attemptLogin();
         }
+
+        startAct(HomeAct.class);
+//        startAct(VerifyCodeAct.class);
+//        startAct(ResetPwdAct.class);
     }
 
     private void attemptLogin() {

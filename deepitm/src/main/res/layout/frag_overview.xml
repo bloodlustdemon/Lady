@@ -5,9 +5,34 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <TextView
+    <com.huawei.deepitm.widget.TopBar
+            android:id="@+id/topbar"
             android:layout_width="match_parent"
-            android:text="@string/overview"
-            android:layout_height="match_parent"/>
+            app:lt_img="@drawable/slct_bell"
+            app:lt_img2="@drawable/ic_refresh"
+            app:rt_img="@drawable/slct_search"
+            android:layout_height="wrap_content"/>
 
+    <com.huawei.deepitm.widget.pullextend.PullExtendLayoutForRecyclerView
+            android:id="@+id/pull_extend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent">
+
+        <com.huawei.deepitm.widget.pullextend.ExtendListHeader
+                android:id="@+id/extend_header"
+                android:layout_width="match_parent"
+                android:layout_height="460dp" />
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/over_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        <com.huawei.deepitm.widget.pullextend.ExtendListFooter
+                android:id="@+id/extend_footer"
+                android:layout_width="match_parent"
+                android:layout_height="260dp" />
+
+    </com.huawei.deepitm.widget.pullextend.PullExtendLayoutForRecyclerView>
 </LinearLayout>

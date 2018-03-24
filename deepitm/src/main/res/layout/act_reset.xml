@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_act"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <android.support.v7.widget.Toolbar
+                android:background="@drawable/gradient_top"
+                android:id="@+id/toolbar"
+                app:navigationIcon="@drawable/ic_back_arrow"
+                app:titleTextColor="@color/black"
+                app:title="@string/title_reset"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ViewStub
+            android:layout_marginTop="30dp"
+            android:id="@+id/email_reset_form"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout="@layout/v_email_reset"
+            android:layout_height="wrap_content"/>
+    <ViewStub
+            android:id="@+id/phone_reset_form"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout="@layout/v_phone_reset"
+            android:layout_height="wrap_content"/>
+
+    <Space
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+
+    <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/input_padding"
+            android:layout_marginEnd="@dimen/input_padding"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/slct_btn"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+    <Space
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+</LinearLayout>

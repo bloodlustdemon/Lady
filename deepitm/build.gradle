@@ -14,6 +14,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         buildConfigField("String","API_HOST","\"https://218.200.61.40:7029/filter/\"")
         buildConfigField("String","API_LV","\"v1\"")
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -38,7 +39,9 @@ dependencies {
     compile group: 'com.github.bumptech.glide', name: 'glide', version: '4.2.0'
     compile 'com.google.android:flexbox:0.2.6'
     compile 'com.youth.banner:banner:1.4.10'
-
+    compile 'cn.bingoogolapple:bga-baseadapter:1.2.9@aar'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
 
     releaseCompile project(path: ':lib', configuration: 'release')
     debugCompile project(path: ':lib', configuration: 'debug')

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_act"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <android.support.v7.widget.Toolbar
+                android:background="@drawable/gradient_top"
+                android:id="@+id/toolbar"
+                app:navigationIcon="@drawable/ic_back_arrow"
+                app:titleTextColor="@color/black"
+                app:title="@string/title_notice"
+                android:layout_width="match_parent"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:layout_height="?attr/actionBarSize"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:background="@color/lighter_gray"
+                android:layout_height="1dp"/>
+
+        <android.support.design.widget.TabLayout
+                android:layout_width="match_parent"
+                android:id="@+id/tab_notice"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/blue_btn"
+                android:layout_height="wrap_content"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:overScrollMode="never"/>
+
+
+</android.support.design.widget.CoordinatorLayout>

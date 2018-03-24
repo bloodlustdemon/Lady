@@ -19,4 +19,38 @@
     <string name="discovery">DISCOVERY</string>
     <string name="solutions">SOLUTIONS</string>
     <string name="account">ACCOUNT</string>
+    <string name="title_vfcode">Verify Phone Number</string>
+    <string name="send_verification">Resend Verification Code</string>
+    <string name="send_verification_tip">Verification code has been sent</string>
+    <string name="time_sec_count">%1$d Seconds to resend</string>
+    <string name="submit">Submit</string>
+    <string name="email_reset_password_tip">To reset your password,enter your e-mail address you use to sign in</string>
+    <string name="title_reset">Reset Password</string>
+
+    <string name="collection">Collection</string>
+    <string name="quickaction">Quick Action</string>
+    <string name="call">Call</string>
+    <string name="title_notice">Notifications</string>
+
+    <string name="warning">Warning</string>
+    <string name="notice">Notice</string>
+    <string name="messages">Messages</string>
+    <string name="reply">Reply</string>
+    <string name="time_date">HH:mm MM DD</string>
+    <string name="subject">High Broadband Utilization</string>
+    <string name="content">Dear ITM, please note the Tism ShaTusi Store\'s Broadband Utilization reached 85%</string>
+    <string name="default_name">Benny Lau</string>
+    <string name="title_chat">Chat</string>
+    <string name="preference_private">%1$d %2$s you follow</string>
+
+    <string-array name="discovery">
+        <item >@string/popular</item>
+        <item >@string/industry</item>
+        <item >@string/products</item>
+        <item >@string/forum</item>
+    </string-array>
+    <string name="popular">Popular</string>
+    <string name="industry">Industry</string>
+    <string name="products">Products</string>
+    <string name="forum">Forum</string>
 </resources>

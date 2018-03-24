@@ -10,7 +10,7 @@ import org.paul.lib.base.BaseFrag;
 public class AccountFrag extends BaseFrag {
     @Override
     public int getLayoutId() {
-        return R.layout.frag_overview;
+        return R.layout.frag_account;
     }
 
     @Override

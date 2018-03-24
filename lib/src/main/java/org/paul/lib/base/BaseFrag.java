@@ -16,10 +16,12 @@ import android.view.ViewGroup;
 public abstract class BaseFrag extends Fragment {
 
     protected String TAG = getClass().getSimpleName();
+    protected Bundle arguments;
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        arguments=getArguments();
         bindUi();
     }
 
