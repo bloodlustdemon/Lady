@@ -1,6 +1,5 @@
 package com.huawei.deepitm.ui;
 
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import com.huawei.deepitm.R;
 import com.huawei.deepitm.widget.TopBar;
@@ -19,7 +18,7 @@ public class ChatAct extends BaseAct {
     @Override
     protected void bindUi() {
 
-        TopBar topbar = $(R.id.topbar);
+        TopBar topbar = $(R.id.topbar_overview);
         topbar.setTitle(parentIntent.getStringExtra("sendTo"));
         topbar.setLeftListener(new View.OnClickListener() {
             @Override

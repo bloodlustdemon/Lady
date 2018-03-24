@@ -49,8 +49,36 @@
         <item >@string/products</item>
         <item >@string/forum</item>
     </string-array>
+    <string-array name="as">
+        <item>"Logistics"</item>
+        <item>"Retail"</item>
+        <item>"Financial Services"</item>
+        <item>"Manufacture"</item>
+        <item>"Sport &amp; Entertainment"</item>
+        <item>"Startups"</item>
+        <item>"Small Business"</item>
+        <item>"Enterprise"</item>
+        <item>"Engrgy &amp; Utilities"</item>
+    </string-array>
+    <string-array name="looking_for">
+        <item>"Logistics"</item>
+        <item>"Retail"</item>
+        <item>"Financial Services"</item>
+        <item>"Manufacture"</item>
+        <item>"Sport &amp; Entertainment"</item>
+        <item>"Startups"</item>
+        <item>"Small Business"</item>
+        <item>"Enterprise"</item>
+        <item>"Engrgy &amp; Utilities"</item>
+    </string-array>
     <string name="popular">Popular</string>
     <string name="industry">Industry</string>
     <string name="products">Products</string>
     <string name="forum">Forum</string>
+    <string name="spinner_up">As</string>
+    <string name="spinner_dn">I\'m Looking For</string>
+    <string name="offerings">Offerings</string>
+    <string name="favourites">Favourites</string>
+    <string name="contacthkt">Contact HKT</string>
+    <string name="language">Language</string>
 </resources>

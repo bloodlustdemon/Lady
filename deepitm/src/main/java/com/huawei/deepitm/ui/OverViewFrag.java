@@ -44,7 +44,7 @@ public class OverViewFrag extends BaseFrag {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         overViewAdapter = new OverViewAdapter();
         mRecyclerView.setAdapter(overViewAdapter);
-        TopBar topBar = $(R.id.topbar);
+        TopBar topBar = $(R.id.topbar_overview);
         topBar.setNum(3);
         topBar.setLeftListener(new View.OnClickListener() {
             @Override

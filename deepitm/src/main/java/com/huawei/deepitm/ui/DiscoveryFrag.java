@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -25,7 +26,7 @@ public class DiscoveryFrag extends BaseFrag {
     @Override
     protected void bindUi() {
 
-        TopBar topBar = $(R.id.topbar);
+        TopBar topBar = $(R.id.topbar_discovery);
         topBar.setLeftListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,6 +41,13 @@ public class DiscoveryFrag extends BaseFrag {
             }
         });
 //        topBar.setNum(arguments.getInt("msgCount",0));
+//        Toolbar toolbar =$(R.id.toolbar);
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startAct(NoticeAct.class);
+//            }
+//        });
         TabLayout tabLayout = $(R.id.tab);
         RecyclerView recyclerView = $(R.id.recycle);
         tabLayout.setTabMode(TabLayout.MODE_FIXED);

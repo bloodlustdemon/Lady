@@ -6,7 +6,7 @@
               android:layout_height="match_parent">
 
     <com.huawei.deepitm.widget.TopBar
-            android:id="@+id/topbar"
+            android:id="@+id/topbar_overview"
             android:layout_width="match_parent"
             app:lt_img="@drawable/slct_bell"
             app:lt_img2="@drawable/ic_refresh"

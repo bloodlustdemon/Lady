@@ -15,7 +15,7 @@
 
         <com.huawei.deepitm.widget.TopBar
                 android:background="@drawable/gradient_top"
-                android:id="@+id/topbar"
+                android:id="@+id/topbar_overview"
                 android:layout_width="match_parent"
                 app:lt_img="@drawable/ic_back_arrow"
                 app:rt_img="@drawable/slct_account"
