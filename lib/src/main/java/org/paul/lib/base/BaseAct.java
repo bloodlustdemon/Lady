@@ -20,14 +20,14 @@ public abstract class BaseAct extends AppCompatActivity {
     protected String TAG = getClass().getSimpleName();
     protected NetManager netManager = NetManager.getNetManager();
     protected Intent parentIntent;
-    protected Bundle savedIntent;
+    protected Bundle savedInstanceState;
     private boolean hasWater;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         parentIntent = getIntent();
-        savedIntent = savedInstanceState;
+        this.savedInstanceState = savedInstanceState;
         setContentView(getLayoutId());
         bindUi();
     }

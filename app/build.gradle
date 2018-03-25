@@ -38,5 +38,6 @@ dependencies {
     compile 'com.google.android:flexbox:0.2.6'
     compile 'com.youth.banner:banner:1.4.10'
     compile 'com.android.support:support-v4:27.+'
+    compile 'com.google.android.gms:play-services-maps:11.6.2'
     testCompile 'junit:junit:4.12'
 }

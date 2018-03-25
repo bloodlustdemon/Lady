@@ -29,7 +29,6 @@ public class HomeAct extends BaseAct /*implements TabLayout.OnTabSelectedListene
         tabLayout.setupWithViewPager(viewPager);
         initTab(tabLayout);
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
-//        tabLayout.addOnTabSelectedListener(this);
     }
 
     private void initVp(ViewPager viewPager) {
@@ -53,18 +52,4 @@ public class HomeAct extends BaseAct /*implements TabLayout.OnTabSelectedListene
         tabLayout.getTabAt(3).setIcon(R.drawable.slct_account).setText(R.string.account);
     }
 
-//    @Override
-//    public void onTabSelected(TabLayout.Tab tab) {
-//
-//    }
-//
-//    @Override
-//    public void onTabUnselected(TabLayout.Tab tab) {
-//
-//    }
-//
-//    @Override
-//    public void onTabReselected(TabLayout.Tab tab) {
-//
-//    }
 }

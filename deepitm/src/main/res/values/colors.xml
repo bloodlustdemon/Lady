@@ -19,7 +19,7 @@
     <color name="bg_act">#F1F3F6</color>
     <color name="bg_home">#0E365D</color>
     <color name="bg_tab_home">#212121</color>
-    <color name="txt_unslct">#515151</color>
-    <color name="txt_slcted">#788599</color>
+    <color name="txt_unslct">#8A8A8A</color>
+    <color name="txt_slcted">#F8F8F8</color>
     <color name="orange">#FF9701</color>
 </resources>

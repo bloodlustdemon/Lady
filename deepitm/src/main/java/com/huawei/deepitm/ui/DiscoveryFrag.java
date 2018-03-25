@@ -53,7 +53,6 @@ public class DiscoveryFrag extends BaseFrag {
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
         tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
         tabLayout.setTabTextColors(Color.LTGRAY, Color.BLACK);
-//        tabLayout.setSelectedTabIndicatorColor(Color.BLUE);
         String[] stringArray = getResources().getStringArray(R.array.discovery);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         DiscoveryAdapter disAdapter = new DiscoveryAdapter(getContext());
@@ -61,7 +60,7 @@ public class DiscoveryFrag extends BaseFrag {
 //        disAdapter.data = new Integer[]{11, 10, 9, 8, 7, 6, 5, 4, 3, 2};
         recyclerView.setAdapter(disAdapter);
 
-        for (int i = 0; i < stringArray.length - 1; i++) {
+        for (int i = 0; i < stringArray.length; i++) {
             tabLayout.addTab(tabLayout.newTab().setText(stringArray[i]));
         }
         linearLayout = $(R.id.linear);

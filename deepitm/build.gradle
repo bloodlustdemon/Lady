@@ -42,7 +42,7 @@ dependencies {
     compile 'cn.bingoogolapple:bga-baseadapter:1.2.9@aar'
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
     compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
-
+    compile 'com.google.android.gms:play-services-maps:11.6.2'
     releaseCompile project(path: ':lib', configuration: 'release')
     debugCompile project(path: ':lib', configuration: 'debug')
 }

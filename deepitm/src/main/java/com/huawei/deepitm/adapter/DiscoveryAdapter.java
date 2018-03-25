@@ -42,7 +42,7 @@ public class DiscoveryAdapter extends RecyclerView.Adapter<DiscoveryAdapter.VH> 
 
     @Override
     public int getItemViewType(int position) {
-        return new Random().nextInt(1);
+        return new Random().nextInt(2);
     }
 
     @Override

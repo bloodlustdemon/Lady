@@ -42,6 +42,12 @@
     <string name="default_name">Benny Lau</string>
     <string name="title_chat">Chat</string>
     <string name="preference_private">%1$d %2$s you follow</string>
+<string-array name="critical">
+    <item>"By 24H"</item>
+    <item>"By Week"</item>
+    <item>"By Month"</item>
+    <item>"By Year"</item>
+</string-array>
 
     <string-array name="discovery">
         <item >@string/popular</item>
@@ -81,4 +87,12 @@
     <string name="favourites">Favourites</string>
     <string name="contacthkt">Contact HKT</string>
     <string name="language">Language</string>
+    <string name="title_drilldown">HARBOUR CITY STORE</string>
+    <string name="high_warn">High Broadband Utilization</string>
+
+    <string name="google_maps_key">AIzaSyC_8LX9dOPg60UEHZHxQGbshdXnK68r6Po</string>
+    <string name="recommend">RECOMMENDATIONS</string>
+    <string name="buy">BUY</string>
+    <string name="quick_fix">QUICK FIX</string>
+    <string name="learn_more">LEARN MORE</string>
 </resources>
