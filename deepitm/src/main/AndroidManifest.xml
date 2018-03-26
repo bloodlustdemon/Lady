@@ -26,14 +26,14 @@
         <activity android:name=".ui.NoticeAct" android:label="@string/title_notice">
         </activity>
         <activity android:name=".ui.DrillDownAct" android:label="@string/title_notice">
+
+        </activity>
+        <activity android:name=".ui.LoginAct" android:label="@string/action_sign_in_short">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity android:name=".ui.LoginAct" android:label="@string/action_sign_in_short">
-
         </activity>
         <meta-data
                 android:name="com.google.android.geo.API_KEY"

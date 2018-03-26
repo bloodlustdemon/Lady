@@ -180,7 +180,7 @@ public class TrendCircle24H extends TrendCircle {
         paint.getTextBounds(up2, 0, up2.length(), boundsUp2);
         paint.getTextBounds(up1, 0, up1.length(), boundsUp1);
         paint.setStrokeWidth(1);
-        paint.setTextSize(getWidth() / 18);
+        paint.setTextSize(getWidth() / 16);
         paint.setColor(Color.WHITE);
         paint.setTextAlign(Paint.Align.CENTER);
         paint.setStyle(Paint.Style.FILL_AND_STROKE);
