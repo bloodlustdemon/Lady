@@ -112,15 +112,23 @@ public class DrillDownAct extends BaseAct implements OnMapReadyCallback {
             final BroadBandLine.Data dataInner = broadBandLine.getBroadBandLine();
             String lineCoordinate = dataInner.getLineCoordinate();
             String[] split = lineCoordinate.split(",");
-            LatLng BRISBANE = new LatLng(Float.valueOf(split[1]), Float.valueOf(split[0]));
-            mMap.addMarker(new MarkerOptions()
-                    .position(BRISBANE)
+            LatLng latLng = new LatLng(Float.valueOf(split[1]), Float.valueOf(split[0]));
+            MarkerOptions markerOptions = new MarkerOptions()
+                    .position(latLng)
 //                    .title("Brisbane")
 //                    .snippet("Population: 2,074,200")
                     .icon(BitmapDescriptorFactory.fromResource(
                             broadBandLine.getStatus() == 1 ?
                                     R.drawable.ic_green_maker
-                                    : R.drawable.ic_red_maker)));
+                                    : R.drawable.ic_red_maker));
+            mMap.addMarker(markerOptions)
+            ;
+            mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+                @Override
+                public boolean onMarkerClick(Marker marker) {
+                    return false;
+                }
+            });
         }
     }
 
