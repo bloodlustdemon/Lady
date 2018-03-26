@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import org.paul.lib.manager.NetManager;
 
 /**
  * AUTHOR Paul
@@ -17,7 +18,7 @@ public abstract class BaseFrag extends Fragment {
 
     protected String TAG = getClass().getSimpleName();
     protected Bundle arguments;
-
+    protected NetManager netManager = NetManager.getNetManager();
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);

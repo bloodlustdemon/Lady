@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:id="@+id/tv_dn"
                 android:text="@string/content"
-                android:textColor="@color/lighter_gray"
+                android:textColor="@color/darker_gray"
                 android:background="@color/transparent"
 
                 android:textSize="14sp"

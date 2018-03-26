@@ -1,5 +1,7 @@
 package com.huawei.deepitm.ui;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.widget.Toolbar;
@@ -7,7 +9,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import com.huawei.deepitm.R;
+import com.huawei.deepitm.bean.Region;
+import com.huawei.deepitm.bean.RegionBean;
 import org.paul.lib.base.BaseAct;
+import org.paul.lib.base.BaseBean;
+import org.paul.lib.manager.ThreadManager;
 
 /**
  * AUTHOR Paul
@@ -36,9 +42,23 @@ public class VerifyCodeAct extends BaseAct {
         textViewTimeRest.setClickable(false);
         textView.setText(phoneNumber);
         handler.sendEmptyMessage(TIME_COUNT);
+
+        loadData();
+    }
+
+    private void loadData() {
+        ThreadManager.getThreadManager().submit(new Runnable() {
+            @Override
+            public void run() {
+                //netManager.post()//TODO 区号
+            }
+        });
     }
 
     private final int TIME_COUNT = 0x11;
+    private final int VERIFY_SUCCESS = 0x13;
+    private final int VERIFY_FAILED = 0x14;
+    private final int region_success=0x1a;
     private int timeRest=60;
     private TextView textViewTimeRest;
     private Handler handler = new Handler() {
@@ -57,6 +77,12 @@ public class VerifyCodeAct extends BaseAct {
                         textViewTimeRest.setClickable(true);
                         handler.removeMessages(TIME_COUNT);
                     }
+                    break;
+                case VERIFY_SUCCESS:
+                    Intent ret=new Intent();
+                    ret.putExtra("region", (Region) msg.obj);
+                    setResult(region_success,ret);
+                    finish();
                     break;
             }
         }

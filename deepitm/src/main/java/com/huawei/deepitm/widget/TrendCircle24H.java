@@ -35,17 +35,17 @@ public class TrendCircle24H extends TrendCircle {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        if (dataList.size()>0) {
+        if (dataList.size() > 0) {
             drawTrend(canvas, dataList);
-        } else if (dataMap.size()>0) {
+        } else if (dataMap.size() > 0) {
             drawTrend(canvas, dataMap);
         } else {
             drawDefault(canvas);
         }
     }
 
-    private List<Map<Long, Float>> dataList=new ArrayList<>();
-    private Map<Long, Float> dataMap=new HashMap<>();
+    private List<Map<Long, Float>> dataList = new ArrayList<>();
+    private Map<Long, Float> dataMap = new HashMap<>();
 
     public void setData(List<Map<Long, Float>> data) {
         if (null != data) {
@@ -55,13 +55,21 @@ public class TrendCircle24H extends TrendCircle {
         }
     }
 
-    public void setData(Map<Long, Float> data) {
+    private void setData(Map<Long, Float> data) {
         if (null != data) {
             this.dataMap.clear();
             this.dataMap.putAll(data);
-            invalidate();
         }
+        invalidate();
     }
+
+    public void setData(Map<Long, Float> data, int total, int issue) {
+        this.total = total;
+        this.issue = issue;
+        setData(data);
+    }
+
+    private int total, issue;
 
     private void drawTrend(Canvas canvas, List<Map<Long, Float>> data) {
         for (Map<Long, Float> m : data) {
@@ -156,21 +164,21 @@ public class TrendCircle24H extends TrendCircle {
     protected void drawInner(Canvas canvas, int x, int y, float r) {
         paint.reset();
         paint.setAntiAlias(true);
-        String up1 = "18";
+        String up1 = String.valueOf(total);
         String up2 = "BROADBAND";
-        String down1 = "0";
+        String down1 = String.valueOf(issue);
         String down2 = "ISSUE";
 
         paint.setStrokeWidth(8.0f);
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(Color.LTGRAY);
-        float a2= x-(float)(Math.sin(60*Math.PI/180)*r*0.5);
-        float b2 = y+(float)(Math.cos(60*Math.PI/180)*r*0.5);
-        float a3 =x+(float)(Math.sin(60*Math.PI/180)*r*0.5);
-        float b3=y-(float)(Math.cos(60*Math.PI/180)*r*0.5);
+        float a2 = x - (float) (Math.sin(60 * Math.PI / 180) * r * 0.5);
+        float b2 = y + (float) (Math.cos(60 * Math.PI / 180) * r * 0.5);
+        float a3 = x + (float) (Math.sin(60 * Math.PI / 180) * r * 0.5);
+        float b3 = y - (float) (Math.cos(60 * Math.PI / 180) * r * 0.5);
         paint.setStrokeWidth(4);
-        canvas.drawLine(a2,b2,a3,b3,paint);
+        canvas.drawLine(a2, b2, a3, b3, paint);
         paint.reset();
         paint.setAntiAlias(true);
         Rect boundsUp2 = new Rect();
@@ -185,14 +193,14 @@ public class TrendCircle24H extends TrendCircle {
         paint.setTextAlign(Paint.Align.CENTER);
         paint.setStyle(Paint.Style.FILL_AND_STROKE);
         canvas.drawText(up1, x - 2 * boundsUp2.width(), y - r / 3, paint);
-        canvas.drawText(up2, x - 2 * boundsUp2.width()/3, y - r / 6, paint);
+        canvas.drawText(up2, x - 2 * boundsUp2.width() / 3, y - r / 6, paint);
         paint.getTextBounds(down1, 0, down1.length(), boundsDown1);
         paint.getTextBounds(down2, 0, down2.length(), boundsDown2);
         paint.setTextAlign(Paint.Align.LEFT);
         canvas.drawText(down1, x - boundsDown1.width() / 4/*-getLeft()/2*/, y + r / 4, paint);
         paint.setTextSize(getWidth() / 16);
         canvas.drawText(down2, x - boundsDown1.width() / 4/*-getLeft()/2*/, y + r / 3 + boundsDown2.height() / 2, paint);
-        innerHasDrawn=true;
+        innerHasDrawn = true;
     }
 
 }

@@ -1,6 +1,8 @@
 package com.huawei.deepitm.bean;
 
-public class Region {
+import java.io.Serializable;
+
+public class Region implements Serializable{
     private String infoKey;
     private String displayString;
     private int orderNo;

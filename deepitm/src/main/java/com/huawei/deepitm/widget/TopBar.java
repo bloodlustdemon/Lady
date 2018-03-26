@@ -126,4 +126,9 @@ public class TopBar extends LinearLayout {
             left.setNumber(num);
         }
     }
+
+    public void setTitleColor(int titleColor) {
+//        this.titleColor = titleColor;
+        title.setTextColor(titleColor);
+    }
 }

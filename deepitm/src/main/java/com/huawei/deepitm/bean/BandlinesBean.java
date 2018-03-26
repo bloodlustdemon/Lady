@@ -27,6 +27,16 @@ public class BandlinesBean extends BaseBean {
         private String customerId;
         private int lineCount;
         private int dataCount;
+        private int issue;
+
+        public int getIssue() {
+            return issue;
+        }
+
+        public void setIssue(int issue) {
+            this.issue = issue;
+        }
+
         private BroadBandLinePerformance broadBandLinePerformance;
 
         public String getCustomerId() {

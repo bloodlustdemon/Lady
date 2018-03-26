@@ -17,4 +17,8 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_maps">Map</string>
+    <string name="login">登录接口</string>
+    <string name="region">地区接口</string>
+    <string name="verify">验证码接口</string>
+    <string name="unread">未读消息接口</string>
 </resources>

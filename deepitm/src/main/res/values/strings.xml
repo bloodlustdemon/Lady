@@ -20,7 +20,8 @@
     <string name="solutions">SOLUTIONS</string>
     <string name="account">ACCOUNT</string>
     <string name="title_vfcode">Verify Phone Number</string>
-    <string name="send_verification">Resend Verification Code</string>
+    <string name="send_verification">Send Verification Code</string>
+    <string name="resend_verification">Resend Verification Code</string>
     <string name="send_verification_tip">Verification code has been sent</string>
     <string name="time_sec_count">%1$d Seconds to resend</string>
     <string name="submit">Submit</string>
@@ -42,18 +43,18 @@
     <string name="default_name">Benny Lau</string>
     <string name="title_chat">Chat</string>
     <string name="preference_private">%1$d %2$s you follow</string>
-<string-array name="critical">
-    <item>"By 24H"</item>
-    <item>"By Week"</item>
-    <item>"By Month"</item>
-    <item>"By Year"</item>
-</string-array>
+    <string-array name="critical">
+        <item>"By 24H"</item>
+        <item>"By Week"</item>
+        <item>"By Month"</item>
+        <item>"By Year"</item>
+    </string-array>
 
     <string-array name="discovery">
-        <item >@string/popular</item>
-        <item >@string/industry</item>
-        <item >@string/products</item>
-        <item >@string/forum</item>
+        <item>@string/popular</item>
+        <item>@string/industry</item>
+        <item>@string/products</item>
+        <item>@string/forum</item>
     </string-array>
     <string-array name="as">
         <item>"Logistics"</item>
@@ -77,6 +78,17 @@
         <item>"Enterprise"</item>
         <item>"Engrgy &amp; Utilities"</item>
     </string-array>
+    <string-array name="pop">
+        <item>@string/pop_1</item>
+        <item>@string/pop_2</item>
+        <item>@string/pop_3</item>
+        <item>@string/pop_4</item>
+        <item>@string/pop_5</item>
+        <item>@string/pop_6</item>
+        <item>@string/pop_7</item>
+        <item>@string/pop_8</item>
+        <item>@string/pop_9</item>
+    </string-array>
     <string name="popular">Popular</string>
     <string name="industry">Industry</string>
     <string name="products">Products</string>
@@ -90,9 +102,20 @@
     <string name="title_drilldown">HARBOUR CITY STORE</string>
     <string name="high_warn">High Broadband Utilization</string>
 
-    <string name="google_maps_key">AIzaSyC_8LX9dOPg60UEHZHxQGbshdXnK68r6Po</string>
+    <!--<string name="google_maps_key">AIzaSyC_8LX9dOPg60UEHZHxQGbshdXnK68r6Po</string>-->
     <string name="recommend">RECOMMENDATIONS</string>
     <string name="buy">BUY</string>
     <string name="quick_fix">QUICK FIX</string>
     <string name="learn_more">LEARN MORE</string>
+    <string name="net_error">NET ERROR</string>
+
+    <string name="pop_1">"Logistics"</string>
+    <string name="pop_2">"Retail"</string>
+    <string name="pop_3">"Financial Services"</string>
+    <string name="pop_4">"Manufacture"</string>
+    <string name="pop_5">"Sport &amp; Entertainment"</string>
+    <string name="pop_6">"Startups"</string>
+    <string name="pop_7">"Small Business"</string>
+    <string name="pop_8">"Enterprise"</string>
+    <string name="pop_9">"Engrgy &amp; Utilities"</string>
 </resources>

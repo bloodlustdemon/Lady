@@ -64,9 +64,10 @@
             </LinearLayout>
 
             <com.huawei.deepitm.widget.TopBar
+                    android:fitsSystemWindows="true"
                     android:id="@+id/topbar_drilldown"
                     app:layout_collapseMode="pin"
-                    app:lt_img="@drawable/ic_back_arrow"
+                    app:lt_img="@drawable/ic_back_arrow_white"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"/>
 

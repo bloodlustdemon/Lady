@@ -30,6 +30,36 @@ public class NetManager {
         return netManager;
     }
 
+    public String post(String spec, Map<String, Object> params) {
+        String ret = null;
+        try {
+            HttpURLConnection connection = initHttp(spec, "POST", params);
+            int responseCode = connection.getResponseCode();
+            if (responseCode == 200) {
+                try {
+                    BufferedInputStream bis = new BufferedInputStream(connection.getInputStream());
+                    ByteArrayOutputStream bos = new ByteArrayOutputStream();
+                    int len;
+                    byte[] arr = new byte[1024];
+                    while ((len = bis.read(arr)) != -1) {
+                        bos.write(arr, 0, len);
+                        bos.flush();
+                    }
+                    bos.close();
+                    ret = bos.toString("utf-8");
+                    Log.d(TAG, "ret=" + ret);
+                } catch (com.google.gson.JsonSyntaxException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                Log.d(TAG, "ret code = " + responseCode);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return ret;
+    }
+
     public <T extends BaseBean> T post(String spec, Map<String, Object> params, Class<T> clz) {
         Log.d(TAG, "REQUEST URL :[" + spec + "]");
         try {
@@ -44,6 +74,36 @@ public class NetManager {
             Log.d(TAG, "ERROR IN NET EVENT, " + "error clz " + clz.getSimpleName());
         }
         return null;
+    }
+
+    public String get(String spec) {
+        String ret = null;
+        try {
+            HttpURLConnection connection = initHttp(spec, "GET", null);
+            int responseCode = connection.getResponseCode();
+            if (responseCode == 200) {
+                try {
+                    BufferedInputStream bis = new BufferedInputStream(connection.getInputStream());
+                    ByteArrayOutputStream bos = new ByteArrayOutputStream();
+                    int len;
+                    byte[] arr = new byte[1024];
+                    while ((len = bis.read(arr)) != -1) {
+                        bos.write(arr, 0, len);
+                        bos.flush();
+                    }
+                    bos.close();
+                    ret = bos.toString("utf-8");
+                    Log.d(TAG, "ret=" + ret);
+                } catch (com.google.gson.JsonSyntaxException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                Log.d(TAG, "ret code = " + responseCode);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return ret;
     }
 
     public <T extends BaseBean> T get(String spec, Class<T> clz) {
@@ -100,6 +160,19 @@ public class NetManager {
         connection.setConnectTimeout(CONNECT_TIME);
         connection.setReadTimeout(READ_TIME);
         connection.setUseCaches(false);
+
+        initHeader(connection);
+        initBody(connection, params);
+        return connection;
+    }
+
+    private static String createParams(Map<String, Object> params) {
+        String ret = new Gson().toJson(params);
+        Log.d(TAG, "params2string = " + ret);
+        return ret;
+    }
+
+    private HttpURLConnection initHeader(HttpURLConnection connection) {
         connection.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36");
         connection.addRequestProperty("Content-Type", "application/json;charset=UTF-8");
         connection.addRequestProperty("Connection", "keep-alive");
@@ -107,16 +180,6 @@ public class NetManager {
         connection.addRequestProperty("Accept-Language", "en-US");
         connection.addRequestProperty("token", Constants.getToken());
         connection.addRequestProperty("Accept", "application/json, text/plain, */*");
-        initHeader(connection);
-        initBody(connection, params);
-        return connection;
-    }
-
-    private static String createParams(Map<String, Object> params) {
-        return new Gson().toJson(params);
-    }
-
-    private HttpURLConnection initHeader(HttpURLConnection connection) {
         return connection;
     }
 

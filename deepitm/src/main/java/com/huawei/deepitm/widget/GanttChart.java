@@ -36,7 +36,7 @@ public class GanttChart extends View {
     }
 
     private float scaleDistance = 20f;
-    private Map<Long, Double> data=new HashMap<>();
+    private Map<Long, Double> data = new HashMap<>();
 
     public void setData(Map<Long, Double> data) {
         this.data.clear();
@@ -63,6 +63,7 @@ public class GanttChart extends View {
         mHeight = h;
         mWidth = w;
     }
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
@@ -79,6 +80,7 @@ public class GanttChart extends View {
             setMeasuredDimension(widthSpectSize, mHeight);
         }
     }
+
     @Override
     protected void onDraw(Canvas canvas) {
 //        super.onDraw(canvas);
@@ -86,8 +88,10 @@ public class GanttChart extends View {
         //
         paint.reset();
         textPaint.reset();
-        drawCoordinate(canvas);
-        if (null != data) {
+        paint.setAntiAlias(true);
+        textPaint.setAntiAlias(true);
+        if (data.size()>0) {
+            drawCoordinate(canvas);
             drawPoint(canvas);
         }
     }
@@ -101,6 +105,7 @@ public class GanttChart extends View {
         String spec = "CRITICAL";
         Rect rect = new Rect();
         textPaint.reset();
+        textPaint.setAntiAlias(true);
         textPaint.getTextBounds(spec, 0, spec.length(), rect);
         //坐标原点
         float startX = getPaddingLeft() + dip2px(getContext(), textPaint.measureText(spec));
@@ -183,7 +188,7 @@ public class GanttChart extends View {
         float perLengthX = lengthX / num;
         float perLengthY = lengthY / numY;
 
-        paint.setColor(Color.LTGRAY);
+        paint.setColor(Color.DKGRAY);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(2.0f);
 
@@ -196,7 +201,7 @@ public class GanttChart extends View {
 //                drawX(canvas, num, y, perLengthY);
                 x = getPaddingLeft();
             }
-            textPaint.setColor(Color.LTGRAY);
+            textPaint.setColor(Color.DKGRAY);
             drawY(canvas, i, y, perLengthX);
             canvas.drawLine(x, y, sX, sY, paint);
             Log.d("GANT", "第" + i + "行,x=" + x + ",y=" + y);
@@ -208,7 +213,7 @@ public class GanttChart extends View {
 
     private void drawY(Canvas canvas, int i, float y, float perLengthX) {
         String spec = "";
-        textPaint.setColor(Color.LTGRAY);
+        textPaint.setColor(Color.DKGRAY);
         textPaint.setTextAlign(Paint.Align.LEFT);
         textPaint.setTextSize(sp2px(getContext(), 14));
         textPaint.setStyle(Paint.Style.FILL_AND_STROKE);
@@ -246,6 +251,7 @@ public class GanttChart extends View {
      */
     private void drawX(Canvas canvas,/* int num,*/ float y, float perLengthX) {
         textPaint.reset();
+        textPaint.setAntiAlias(true);
         int num = handleSize();
         Rect rect = new Rect();
         textPaint.getTextBounds(specN, 0, specN.length(), rect);
@@ -262,7 +268,7 @@ public class GanttChart extends View {
             vv.add(v);
         }
         textPaint.setTextSize(sp2px(getContext(), 14));
-        textPaint.setColor(Color.LTGRAY);
+        textPaint.setColor(Color.DKGRAY);
         for (int i = 0; i < num; i++) {
             float startX = x + perLengthX * i;
 //            float startY = y + sp2px(getContext(), rect.height() /*/ 2*/);

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="login_api">account/account/%1$s/login</string>
     <string name="region_api">sysmgmt/sysmgmt/%1$s/dictionaries/%2$s/%3$s</string>
     <string name="unread_count_api">notification/notification/%1$s/notifications/query</string>
-    <string name="alram_broadbandlines_api">bizmonitor/bizmonitor/%1$s/customers/%2$s/alram_broadbandlines/performances</string>
-    <string name="all_broadbandlines_api">bizmonitor/bizmonitor/%1$s/customers/%2$s/broadbandlines/status</string>
-
 </resources>
